@@ -32,9 +32,9 @@ module top(){
 module bot(){ 
     difference(){
         hull(){
-            cube([10*1.05, 4.7*1.1,0.01],center=true); 
+            cube([10*1.02, 4.7*1.1,0.01],center=true); 
             translate([0,0,6])
-            cube([10*1.05,3.5*1.1,0.01],center=true);
+            cube([10*1.02,3.5*1.1,0.01],center=true);
         }
         translate([-11,0,5-2.13]){
             rotate([0,90,0]){
@@ -74,16 +74,16 @@ translate([0,10,0]){
     }
     bot();
     //top();
-    cube([17,2.25,5],center=true);
-    translate([-17/2,0,2.55]){
+    cube([16,2.25,5],center=true);
+    translate([-16.5/2,0,2.55]){
         rotate([90,0,90]){
-        cylinder(d=2.25,h=17);
+            cylinder(d=2.25,h=16.5);
         }
     }
     
     translate([-30/2,0,2.25]){
         rotate([90,0,90]){
-        cylinder(d=1.35,h=30);
+        cylinder(d=1.5,h=30);
         }
     }
     
