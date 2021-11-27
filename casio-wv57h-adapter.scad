@@ -44,20 +44,21 @@ module bot(){
     }
 }
 
+module main(){
 translate([0,10,0]){
     difference(){
     union(){
         translate([0,0,5/2]){
-            cube([24.25,4.7*1.1+1,5],center=true);
+            cube([24.25,4.7*1.1+2,5],center=true);
         }
         difference(){
             for(i=[-1:1:1]){
                 mirror([i,0,0]){
                     hull(){
-                        translate([-22.5/2,0,5/2]){
-                            cube([3,4.7*1.1+1,5],center=true);
+                        translate([-22.5/2-0.7,0,5/2]){
+                            cube([3,4.7*1.1+2,5],center=true);
                         }
-                        translate([-22.5/2-3/2,0,7.5]){
+                        translate([-22.5/2-3/2-0.7,0,7.5]){
                             rotate([90,0,90]){
                                 cylinder(d=4,h=3);
                             }
@@ -89,7 +90,7 @@ translate([0,10,0]){
     
     for(j=[-1:2:1]){
         for(i=[-1:2:1]){
-            translate([(24.25/2+2)*i,j*(4.7*1.1+1)/2,10/2-0.1]){
+            translate([(24.25/2+2)*i,j*(4.7*1.1+2)/2,10/2-0.1]){
                 rotate([0,0,45]){
                     cube([4,4,10],center=true);
                 }
@@ -100,10 +101,11 @@ translate([0,10,0]){
 }
     
 }
+}
 
-
-//bot();
-
-
-
-//top();
+main();
+/*translate([0,7,0])
+main();
+for(i=[-1:2:1])
+translate([i*8.5,14,.5])
+cube([3,2,1],center=true);*/
